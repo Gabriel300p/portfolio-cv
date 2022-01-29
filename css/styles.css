@@ -56,9 +56,9 @@ html {
   scroll-behavior: smooth;
 }
 
-.scale-cv .generate-pdf{
+/* .scale-cv .generate-pdf{
   display: none;
-}
+} */
 
 .scale-cv .bd-container {
   max-width: 805px;
@@ -189,6 +189,7 @@ img {
 }
 
 .home {
+  margin-top: 0.6rem;
   position: relative;
 }
 
@@ -202,6 +203,7 @@ img {
 }
 
 .home_title {
+  margin-top: 1.5rem;
   font-size: 1.6rem;
 }
 
@@ -326,7 +328,7 @@ img {
 }
 
 .skills_data {
-  margin-bottom: var(--mb-2);
+  margin-bottom: var(--mb-3);
 }
 
 .skills_name,
