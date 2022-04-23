@@ -9,6 +9,7 @@
   --container-color: #FAFAFA;
   --container-color-alt: #F0EFEF;
   --body-color: #FCFCFC;
+  --home-color: #353534;
 
   --body-font: 'Poppins', sans-serif;
   --h1-font-size: 1.5rem;
@@ -38,16 +39,6 @@ body.scale-cv {
   --smaller-font-size: .668rem;
 }
 
-.generate-pdf {
-  /* display: none; */
-  position: absolute;
-  top: 1.5rem;
-  left: 0;
-  font-size: 1.2rem;
-  color: var(--text-color);
-  cursor: pointer;
-}
-
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -65,17 +56,17 @@ html {
 }
 
 .scale-cv .section {
-  padding: 1.5rem 0 .80rem;
+  padding: 0.5rem 0 .80rem;
 }
 
 .scale-cv .section-title {
   margin-bottom: .75rem;
 }
 
-.scale-cv .resume_left,
+/* .scale-cv .resume_left,
 .scale-cv .resume_right {
   padding: 0 1rem;
-}
+} */
 
 .scale-cv .home_container {
   gap: 1.5rem;
@@ -85,10 +76,10 @@ html {
   gap: .25rem;
 }
 
-.scale.cv .home_address,
+/* .scale.cv .home_address,
 .scale.cv .social_container {
   gap: .75rem;
-}
+} */
 
 .scale-cv .home_icon,
 .scale-cv .social_icon {
@@ -98,7 +89,10 @@ html {
 .scale-cv .education_container,
 .scale-cv .experience_container,
 .scale-cv .certificate_container {
+  margin-top: 1rem;
+  margin-right: 3rem;
   gap: 1rem;
+  
 }
 
 .scale-cv .education_time,
@@ -125,8 +119,16 @@ html {
   gap: .25rem;
 }
 
+.scale-cv .certificate {
+  margin-top: 2rem;
+}
+
 .scale-cv .skills_name {
   margin-bottom: var(--mb-1);
+}
+
+.scale-cv .skills_name_2 {
+  margin-bottom: var(--mb-2);
 }
 
 body {
@@ -162,9 +164,9 @@ img {
   height: auto;
 }
 
-.section {
+/* .section {
   padding: 1.5rem 0; 
-}
+} */
 
 .section-title {
   font-size: var(--h2-font-size);
@@ -173,15 +175,16 @@ img {
   text-transform: uppercase;
   letter-spacing: .35rem;
   text-align: center;
-  margin-bottom: var(--mb-3);
+  margin-bottom: 2rem;
+  padding: 1rem 0 0 2.3rem;
 }
 
-.bd-container {
+/* .bd-container {
   max-width: 968px;
   width: calc(100% - 3rem);
   margin-left: var(--mb-3);
   margin-right: var(--mb-3);
-}
+} */
 
 .bd-grid {
   display: grid;
@@ -189,58 +192,57 @@ img {
 }
 
 .home {
-  margin-top: 0.6rem;
   position: relative;
 }
 
 .home_container {
   gap: 3rem;
+  background-color: var(--home-color);
 }
 
 .home_data {
   gap: .5rem;
-  text-align: center;
+  padding-left: 2rem;
 }
 
 .home_title {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   font-size: 1.6rem;
+  white-space: nowrap;
+  color: var(--body-color);
 }
 
 .home_profession {
-  font-size: var(--normal-font-size);
-  margin-bottom: var(--mb-1);
+  color: var(--body-color);
 }
 
 .home_address {
-  gap: 1rem;
+  display: flex;
+  /* gap: 1rem; */
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  color: var(--body-color);
 }
 
 .home_information {
   display: flex;
   align-items: center;
+  margin-top: 0.7rem;
   font-size: var(--small-font-size);
+  color: var(--body-color);
+}
+
+.home_link {
+  color: var(--body-color);
+}
+
+.section-1 {
+  margin-right: 1.2rem;
 }
 
 .home_icon {
   font-size: 1.2rem;
   margin-right: .25rem;
-}
-
-.home_button-movil {
-  display: inline-block;
-  border: 2px solid var(--text-color);
-  color: var(--title-color);
-  padding: 1rem 2rem;
-  border-radius: .25rem;
-  transition: .3s;
-  font-weight: var(--font-medium);
-  margin-top: var(--mb-1);
-}
-
-.home_button-movil:hover {
-  background-color: var(--text-color);
-  color: var(--container-color);
 }
 
 .social_container {
@@ -262,10 +264,13 @@ img {
 .social_icon {
   font-size: 1.2rem;
   margin-right: .25rem;
+  color: var(--body-color);
 }
+
 
 .profile_description {
   text-align: center;
+  padding: 0 2.3rem 0 2.3rem;
 }
 
 .education_content,
@@ -276,6 +281,7 @@ img {
 .education_time,
 .experience_time {
   padding-right: 1rem;
+  padding: 0 2.3rem 0 2.3rem;
 }
 
 .education_rounder,
@@ -300,22 +306,30 @@ img {
 
 .education_date,
 .experience_date {
+  font-size: var(--normal-font-size);
   gap: 5rem;
 }
 
 .education_title,
 .experience_title {
+  margin-bottom: 0.5rem;
   font-size: var(--h3-font-size);
 }
 .education_studies {
+  margin-bottom: 0.5rem;
   font-size: var(--normal-font-size);
   color: var(--title-color);
-
 }
+
 .education_period,
 .experience_period,
 .certificate_period {
-  font-size: var(--smaller-font-size);
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.education_period_2 {
+  font-size: 0.7rem;
 }
 
 .skills_content,
@@ -323,20 +337,31 @@ img {
   grid-template-columns: repeat(2, 1fr);
 }
 
+/* .skills_container {
+  margin-top: 2rem;
+} */
+
 .skills_content {
   gap: 0;
 }
 
-.skills_data {
-  margin-bottom: var(--mb-3);
-}
 
 .skills_name,
-.languages_name {
-  display: flex;
+.languages_name,
+.skills_name_2 {
   align-items: center;
-  margin-bottom: var(--mb-2);
+  padding-bottom: 5rem;
+  padding: 0 2.3rem 0 2.3rem;
 }
+
+/* .skills_data {
+  display: flex;
+} */
+/* .skills_container{
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+} */
 
 .skills_circle {
   display: inline-block;
@@ -355,6 +380,7 @@ img {
 .skills_title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-2);
+  margin-left: 2.3rem;
 }
 
 .soft_skills_circle {
@@ -375,9 +401,9 @@ img {
   margin-right: .75rem;
 }
 
-.certificate_container{
+/* .certificate_container{
   margin-bottom: var(--mb-3);
-}
+} */
 
 .certificate_title {
   font-size: var(--h3-font-size);
@@ -393,6 +419,18 @@ img {
   margin-right: .75rem;
 }
 
+.languages_title{
+  padding-bottom: 1rem;
+}
+
+.languages_description {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  font-size: var(--normal-font-size);
+  color: var(--title-color);
+}
+
 @media screen and (min-width: 968px) {
   body {
     margin: 3rem 0;
@@ -404,19 +442,8 @@ img {
   }
 
   .resume {
-    display: grid;
-    grid-template-columns: .5fr 1fr;
     background-color: var(--container-color);
     box-shadow: 0 0 8px rgba(13, 12, 12, .15);
-  }
-
-  .resume_left {
-    background-color: var(--container-color-alt);
-  }
-
-  .resume_left,
-  .resume_right {
-    padding: 0 1.5rem;
   }
 
   .section-title, 
@@ -427,11 +454,5 @@ img {
   .home_container {
     gap: 1.5rem;
   }
-
-  .home_button-movil {
-    display: none;
-  }
-
-  
 }
 
